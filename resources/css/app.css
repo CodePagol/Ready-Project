@@ -1,0 +1,18 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* Thiṡ css used for some tailwind jetstream components if tailwind is not used */
+
+@import 'tailwind-custom.css';
+@import 'sidebar.css';
+@import 'navbar.css';
+
+[x-cloak] {
+    display: none;
+}
+
+/* Fix for the z-index of the floating label on php flasher toast*/
+.fl-wrapper {
+    z-index: 9999 ! important;
+}
