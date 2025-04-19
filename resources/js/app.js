@@ -1,15 +1,13 @@
-import './bootstrap';
-import 'bootstrap'; // Bootstrap JS load
-import * as bootstrap from 'bootstrap'; // Import Bootstrap object
 // Importing necessary libraries
 import './bootstrap';
 import 'bootstrap'; // Bootstrap JS load
-import 'livewire-sortable';
 import * as bootstrap from 'bootstrap'; // Import Bootstrap object
+import 'livewire-sortable';
 import jQuery from 'jquery';
 import TomSelect from "tom-select";
 import "tom-select/dist/css/tom-select.css";
-
+import 'summernote/dist/summernote-lite';
+import 'summernote/dist/summernote-lite.css';
 import moment from 'moment-timezone';
 
 // Make libraries available globally
@@ -87,3 +85,86 @@ window.initTomSelect = function () {
         }
     });
 };
+
+// for summernote
+document.addEventListener("DOMContentLoaded", function () {
+    var DArrow = function (context) {
+        var ui = $.summernote.ui;
+
+        var button = ui.button({
+            contents: '<span style="font-size: 16px; font-weight:bold;" class="text-danger">&#11162;</span>',
+            // tooltip: '<i style="font-size: 16px; font-weight:bold;" class=""></i>',
+            click: function () {
+                context.invoke('editor.pasteHTML', '<span style="font-size: 16px; font-weight:bold;" class="text-danger">&#11162;</span>');
+            }
+        });
+
+        return button.render(); // return button as jquery object
+    };
+    var SArrow = function (context) {
+        var ui = $.summernote.ui;
+
+        var button = ui.button({
+            contents: '<span style="font-size: 16px; font-weight:bold;" class="text-success">&#11162;</span>',
+            // tooltip: '<i style="font-size: 16px; font-weight:bold;" class=""></i>',
+            click: function () {
+                context.invoke('editor.pasteHTML', '<span style="font-size: 16px; font-weight:bold;" class="text-success">&#11162;</span>');
+            }
+        });
+
+        return button.render(); // return button as jquery object
+    };
+    var BArrow = function (context) {
+        var ui = $.summernote.ui;
+
+        var button = ui.button({
+            contents: '<span style="font-size: 16px; font-weight:bold;" class="text-dark">&#11162;</span>',
+            // tooltip: '<i style="font-size: 16px; font-weight:bold;" class=""></i>',
+            click: function () {
+                context.invoke('editor.pasteHTML', '<span style="font-size: 16px; font-weight:bold;" class="text-dark">&#11162;</span>');
+            }
+        });
+
+        return button.render(); // return button as jquery object
+    };
+    
+    $('#remarks').summernote(
+        {
+            height: 300,
+            buttons: {
+                DArrow : DArrow,
+                SArrow : SArrow,
+                BArrow : BArrow
+            },
+            toolbar: [
+                ['style', ['style']],
+                ['fontname', ['fontname']],
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+                ['mybutton', ['DArrow', 'SArrow', 'BArrow']],
+
+            ],
+            callbacks: {
+                onChange: function (contents) {
+                    // @this.set('remarks', contents);
+                }
+            }
+        }
+    );
+
+    // Listen for Livewire events and set content in the editor
+    Livewire.on('loadRemarks', (remarksContent) => {
+        // Ensure content is a string and not an array
+        if (Array.isArray(remarksContent)) {
+            remarksContent = remarksContent.join(' '); // Convert array to string
+        }
+        $('#remarks').summernote('code', remarksContent);
+    });
+});

@@ -47,6 +47,7 @@
         "pdfmake": "^0.2.18",
         "remixicon": "^4.6.0",
         "slick-carousel": "^1.8.1",
+        "summernote": "^0.9.1",
         "tom-select": "^2.4.3"
     }
 }

@@ -1,12 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Thiṡ css used for some tailwind jetstream components if tailwind is not used */
-
 @import 'tailwind-custom.css';
 @import 'sidebar.css';
 @import 'navbar.css';
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* 
+** Thiṡ css used for some tailwind jetstream components if tailwind is not used 
+** @import 'tailwind-custom.css';
+** @import 'sidebar.css';
+** @import 'navbar.css';
+*/
+
+
 
 [x-cloak] {
     display: none;
