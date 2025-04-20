@@ -14,7 +14,7 @@
 
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="{{ route('dashboard.index') }}" class="nav-link link-body-emphasis {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                <a wire:navigate.hover href="{{ route('dashboard.index') }}" class="nav-link link-body-emphasis {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                     <i class="bi bi-pie-chart-fill me-2"></i>
                     <span class="sidebar-text">Dashboard</span>
                 </a>
@@ -23,7 +23,7 @@
             {{-- Supporters --}}
             @if (Auth::user()->hasRole('Super Admin') || Auth::user()->hasPermissionTo('admin-role'))
                 <li class="nav-item">
-                    <a href="#" class="nav-link link-body-emphasis {{ in_array(request()->route()->getName(), ['product-target-manage', 'supporter.list']) ? 'active' : '' }}" data-bs-toggle="collapse" data-bs-target="#admin-collapse" aria-expanded="false">
+                    <a wire:navigate.hover href="#" class="nav-link link-body-emphasis {{ in_array(request()->route()->getName(), ['product-target-manage', 'supporter.list']) ? 'active' : '' }}" data-bs-toggle="collapse" data-bs-target="#admin-collapse" aria-expanded="false">
                         <i class="bi bi-people me-2"></i>
                         <span class="sidebar-text">Admin Panel Report</span>
                         <i class="bi bi-chevron-down ms-auto toggle-icon sidebar-text"></i>
@@ -33,19 +33,19 @@
                         <ul class="ms-4 btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             @if (Auth::user()->role == 'Manager' || Auth::user()->hasRole('Depo Incharge') || Auth::user()->hasRole('Super Admin') )
                                 <li>
-                                    <a href="{{ route('supporter.list', ['type' => 'manager']) }}" class="nav-link link-body-emphasis {{ request()->routeIs('supporter.list') && request('type') === 'manager' ? 'active' : '' }}">
+                                    <a wire:navigate.hover href="{{ route('supporter.list', ['type' => 'manager']) }}" class="nav-link link-body-emphasis {{ request()->routeIs('supporter.list') && request('type') === 'manager' ? 'active' : '' }}">
                                         <i class="bi bi-caret-right-fill me-2"></i>
                                         <span class="sidebar-text">Managers</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('supporter.list', ['type' => 'zse']) }}" class="nav-link link-body-emphasis {{ request()->routeIs('supporter.list') && request('type') === 'zse' ? 'active' : '' }}">
+                                    <a wire:navigate.hover href="{{ route('supporter.list', ['type' => 'zse']) }}" class="nav-link link-body-emphasis {{ request()->routeIs('supporter.list') && request('type') === 'zse' ? 'active' : '' }}">
                                         <i class="bi bi-caret-right-fill me-2"></i>
                                         <span class="sidebar-text">Zonal Sales Executives</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('supporter.list', ['type' => 'tse']) }}" class="nav-link link-body-emphasis {{ request()->routeIs('supporter.list') && request('type') === 'tse' ? 'active' : '' }}">
+                                    <a wire:navigate.hover href="{{ route('supporter.list', ['type' => 'tse']) }}" class="nav-link link-body-emphasis {{ request()->routeIs('supporter.list') && request('type') === 'tse' ? 'active' : '' }}">
                                         <i class="bi bi-caret-right-fill me-2"></i>
                                         <span class="sidebar-text">Territory Sales Executives</span>
                                     </a>
@@ -54,7 +54,7 @@
 
                             @if (Auth::user()->role == 'Zonal Sales Executive' )
                                 <li>
-                                    <a href="{{ route('supporter.list', ['type' => 'zse']) }}" class="nav-link link-body-emphasis {{ request()->routeIs('supporter.list') && request('type') === 'zse' ? 'active' : '' }}">
+                                    <a wire:navigate.hover href="{{ route('supporter.list', ['type' => 'zse']) }}" class="nav-link link-body-emphasis {{ request()->routeIs('supporter.list') && request('type') === 'zse' ? 'active' : '' }}">
                                         <i class="bi bi-caret-right-fill me-2"></i>
                                         <span class="sidebar-text">Zonal Sales Executives</span>
                                     </a>

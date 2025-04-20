@@ -32,10 +32,16 @@
 
             <div class="d-flex justify-content-between align-items-center">
                 @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}" class="text-decoration-none">{{ __('Forgot your password?') }}</a>
+                    <a wire:navigate.hover href="{{ route('password.request') }}" class="text-decoration-none">{{ __('Forgot your password?') }}</a>
                 @endif
-
                 <button type="submit" class="btn btn-primary ms-3 p-2">{{ __('Log in') }}</button>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                @if (Route::has('register'))
+                    <a wire:navigate.hover href="{{ route('register') }}" class="text-decoration-none text-ellipsis text-inherit text-info" >
+                        Create an account ?
+                    </a>
+                @endif
             </div>
         </form>
     </div>

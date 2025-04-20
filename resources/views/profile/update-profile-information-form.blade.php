@@ -73,7 +73,7 @@
                 <small class="text-sm mt-2 dark:text-white">
                     {{ __('Your email address is unverified.') }}
 
-                    <a class="btn btn-link p-0 text-sm text-secondary" 
+                    <a wire:navigate.hover class="btn btn-link p-0 text-sm text-secondary" 
                             wire:click.prevent="sendEmailVerification">
                         {{ __('Click here to re-send the verification email.') }}
                     </a>

@@ -33,25 +33,25 @@
                                     @endif
     
                                     <div class="social-links mt-2">
-                                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                                        <a wire:navigate.hover href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                                        <a wire:navigate.hover href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                                        <a wire:navigate.hover href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                                        <a wire:navigate.hover href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
                                         </div>
                                     </div>
                                 </div>
     
                                 <div class="row pt-3 g-1">
                                     @canany(['create-role', 'edit-role', 'delete-role'])
-                                        <a class="btn btn-primary col-md mx-1" href="{{ route('roles.index') }}">
+                                        <a wire:navigate.hover class="btn btn-primary col-md mx-1" href="{{ route('roles.index') }}">
                                             <i class="fa-solid fa-users-gear"></i> Manage Roles</a>
                                     @endcanany
                                     @canany(['create-user', 'edit-user', 'delete-user'])
-                                        <a class="btn btn-success col-md mx-1" href="{{ route('users.index') }}">
+                                        <a wire:navigate.hover class="btn btn-success col-md mx-1" href="{{ route('users.index') }}">
                                             <i class="fa-solid fa-user-gear"></i> Manage Users</a>
                                     @endcanany
                                     @canany(['create', 'edit', 'delete','view'])
-                                        <a class="btn btn-info col-md mx-1" href="{{ route('dashboard.index') }}"><i class="fa-brands fa-squarespace"></i> {{ __('Dashboard') }}</a>
+                                        <a wire:navigate.hover class="btn btn-info col-md mx-1" href="{{ route('dashboard.index') }}"><i class="fa-brands fa-squarespace"></i> {{ __('Dashboard') }}</a>
                                     @endcanany
                                     <p>&nbsp;</p>
                                 </div>

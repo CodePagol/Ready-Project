@@ -1,6 +1,6 @@
 <nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-body-tertiary z-3">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <a wire:navigate.hover href="/" class="navbar-brand d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <!-- Logo -->
             <x-application-mark class="sidebar-logo" style="height: 2rem !important; width: 3rem !important;" />
             {{-- {!! siteUrlSettings('site_name') !!} --}}
@@ -18,7 +18,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item d-lg-none">
                     {{-- <a href="{{ route('dashboard.index') }}" class="nav-link link-body-emphasis {{ request()->routeIs('dashboard') ? 'active' : '' }}"> --}}
-                        <a href="" class="nav-link link-body-emphasis">
+                        <a wire:navigate.hover href="" class="nav-link link-body-emphasis">
                         <i class="bi bi-pie-chart-fill me-2"></i>
                         <span class="sidebar-text">Dashboard</span>
                     </a>
@@ -32,9 +32,9 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="teamDropdown">
                             <li class="dropdown-header">{{ __('Manage Team') }}</li>
-                            <li><a class="dropdown-item" href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">{{ __('Team Settings') }}</a></li>
+                            <li><a wire:navigate.hover class="dropdown-item" href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">{{ __('Team Settings') }}</a></li>
                             @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                <li><a class="dropdown-item" href="{{ route('teams.create') }}">{{ __('Create New Team') }}</a></li>
+                                <li><a wire:navigate.hover class="dropdown-item" href="{{ route('teams.create') }}">{{ __('Create New Team') }}</a></li>
                             @endcan
                             @if (Auth::user()->allTeams()->count() > 1)
                                 <li><hr class="dropdown-divider"></li>
@@ -59,16 +59,16 @@
                     
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
                         <li class="dropdown-header">{{ __('Manage Account') }}</li>
-                        <li><a class="dropdown-item" href="{{ route('profile.show') }}">{{ __('Profile') }}</a></li>
+                        <li><a wire:navigate.hover class="dropdown-item" href="{{ route('profile.show') }}">{{ __('Profile') }}</a></li>
                         @canany(['create-role', 'edit-role', 'delete-role'])
-                            <li><a class="dropdown-item" href="{{ route('roles.index') }}">{{ __('Manage Role') }}</a></li>
+                            <li><a wire:navigate.hover class="dropdown-item" href="{{ route('roles.index') }}">{{ __('Manage Role') }}</a></li>
                         @endcanany
 
                         @canany(['create-user', 'edit-user', 'delete-user'])
-                            <li><a class="dropdown-item" href="{{ route('users.index') }}">{{ __('Manage User') }}</a></li>
+                            <li><a wire:navigate.hover class="dropdown-item" href="{{ route('users.index') }}">{{ __('Manage User') }}</a></li>
                         @endcanany
                         @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                            <li><a class="dropdown-item" href="{{ route('api-tokens.index') }}">{{ __('API Tokens') }}</a></li>
+                            <li><a wire:navigate.hover class="dropdown-item" href="{{ route('api-tokens.index') }}">{{ __('API Tokens') }}</a></li>
                         @endif
                         <li><hr class="dropdown-divider"></li>
                         <li>

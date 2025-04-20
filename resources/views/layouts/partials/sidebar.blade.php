@@ -15,7 +15,7 @@
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
             {{-- <a href="{{ route('dashboard.index') }}" class="nav-link link-body-emphasis {{ request()->routeIs('dashboard') ? 'active' : '' }}"> --}}
-            <a href="" class="nav-link link-body-emphasis">
+            <a wire:navigate.hover href="" class="nav-link link-body-emphasis">
                 <i class="bi bi-pie-chart-fill me-2"></i>
                 <span class="sidebar-text">Dashboard</span>
             </a>
