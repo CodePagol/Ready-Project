@@ -1,6 +1,11 @@
 @import 'tailwind-custom.css';
 @import 'sidebar.css';
 @import 'navbar.css';
+@import 'libs.bundle.css';
+@import 'theme.bundle.css';
+/* @import 'theme.bundle.css';
+@import 'theme-rtl.min.css';
+@import 'theme.min.css'; */
 
 /* @tailwind base;
 @tailwind components;
