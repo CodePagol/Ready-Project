@@ -18,10 +18,10 @@
         @livewireStyles
     </head>
     <body>
+        <div class="font-sans text-gray-900 dark:text-gray-100 antialiased">
+            {{ $slot }}
+        </div>
         <section>
-            <div class="font-sans text-gray-900 dark:text-gray-100 antialiased">
-                {{ $slot }}
-            </div>
             <div class='air air1'></div>
             <div class='air air2'></div>
             <div class='air air3'></div>
