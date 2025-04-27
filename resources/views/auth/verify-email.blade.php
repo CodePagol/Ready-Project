@@ -1,45 +1,42 @@
 <x-guest-layout>
-    <x-authentication-card>
+    <x-authentication-card class="box__sm">
         <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
-
-        <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-            {{ __('Before continuing, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
-        </div>
-
-        @if (session('status') == 'verification-link-sent')
-            <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
-                {{ __('A new verification link has been sent to the email address you provided in your profile settings.') }}
-            </div>
-        @endif
-
-        <div class="mt-4 flex items-center justify-between">
-            <form method="POST" action="{{ route('verification.send') }}">
+        
+        <div class="box__right">
+            <form class="form" method="POST" action="{{ route('verification.send') }}">
+                <h2 class="form__title">{{ __('Email Verification') }}</h2>
                 @csrf
 
-                <div>
-                    <x-button type="submit">
-                        {{ __('Resend Verification Email') }}
-                    </x-button>
+                <div class="mb-4 form__text">
+                    {{ __('Before continuing, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
                 </div>
+
+                @if (session('status') == 'verification-link-sent')
+                    <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
+                        {{ __('A new verification link has been sent to the email address you provided in your profile settings.') }}
+                    </div>
+                @endsession
+
+                <x-validation-errors class="mb-4" />
+
+                <button type="submit" class="form__button">{{ __('Resend Verification Email') }}</button>
             </form>
 
-            <div>
-                <a wire:navigate.hover
-                    href="{{ route('profile.show') }}"
-                    class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
-                >
-                    {{ __('Edit Profile') }}</a>
+            <div class="form__text p-3">
+                Go For Edit <a href="{{ route('profile.show') }}" class="form__link">{{ __('Profile') }}</a>
 
                 <form method="POST" action="{{ route('logout') }}" class="inline">
                     @csrf
 
-                    <button type="submit" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800 ms-2">
+                    <button type="submit" class="form__button text-red-600">
                         {{ __('Log Out') }}
                     </button>
                 </form>
             </div>
         </div>
+
+
     </x-authentication-card>
 </x-guest-layout>

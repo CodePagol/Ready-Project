@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="box">
+    <div {{ $attributes->merge(['class' => 'box']) }}>
         {{ $logo }}
 
         {{ $slot }}

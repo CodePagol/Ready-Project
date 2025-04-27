@@ -1,10 +1,54 @@
+$breakpoints: (
+    "mobile": 480px,
+    "tablet": 770px,
+    "desktop": 1024px,
+    "large": 1280px,
+);
+
+$teal-green: #45d4a1;
+$teal-green-light: #35d89fc0;
+$teal-green-dark: #8fe7c87c;
+$text-opacity : 1;
+
+
+@mixin breakpoint($point, $type: min) {
+    $value: map-get($breakpoints, $point);
+
+    @if $value != null {
+        @media (#{$type}-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint `#{$point}` is not defined in \$breakpoints map.";
+    }
+}
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+body {
+    font-family: "Playfair Display", 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #e2eef0;
+    overflow-x: hidden;
+}
 
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+}
 .audiowide-regular {
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
@@ -13,6 +57,17 @@
 .audiowide-bold {
     font-family: "Audiowide", sans-serif;
     font-weight: 700;
+    font-style: normal;
+}
+.audiowide-italic {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+.playfair-display-500 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -79,52 +134,15 @@ section .air.air4 {
     }
 }
 
-$breakpoints: (
-    "mobile": 480px,
-    "tablet": 770px,
-    "desktop": 1024px,
-    "large": 1280px,
-);
-
-$teal-green: #45d4a1;
-$teal-green-link: #35d89fc0;
-$teal-green-dark: #8fe7c87c;
-$text-opacity : 1;
-
-
-@mixin breakpoint($point, $type: min) {
-    $value: map-get($breakpoints, $point);
-
-    @if $value != null {
-        @media (#{$type}-width: $value) {
-            @content;
-        }
-    } @else {
-        @warn "Breakpoint `#{$point}` is not defined in \$breakpoints map.";
-    }
-}
-
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-
-    *,
-    *:before,
-    *:after {
-        box-sizing: inherit;
-    }
-}
 
 
 .container {
     display: grid;
     place-items: center;
-    @include breakpoint(mobile) {
         height: 85vh;
-    }
-    @include breakpoint(tablet) {
-        height: 80vh;
-    }
+    // @include breakpoint(tablet) {
+    //     height: 85vh;
+    // }
 }
 
 .terms-policy-container {
@@ -139,17 +157,27 @@ html {
     margin: 0 !important;
 }
 
+.p-1 {
+    padding: 0.25rem !important;
+}
+.p-2 {
+    padding: 0.5rem !important;
+}
+.p-3 {
+    padding: 1rem !important;
+}
+
 .font-medium {
     font-weight: 600;
     font-size: 1.6rem;
 }
 
 .text-red-600 {
-    color: #e63946;
+    color: #e63946 !important;
 }
 
 .text-green-600 {
-    color: #008000;
+    color: #008000 !important;
 }
 
 .text-sm {
@@ -413,7 +441,7 @@ html {
     }
 
     &__link {
-        color: $teal-green-link !important;
+        color: $teal-green-light !important;
         cursor: pointer;
     }
 }
@@ -424,6 +452,7 @@ html {
 }
 
 .input-group input {
+    font-size: 1.5rem;
     width: 100%;
     padding: 12px 40px 12px 40px;
     border-radius: 30px;

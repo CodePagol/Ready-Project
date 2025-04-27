@@ -1,11 +1,10 @@
 <x-guest-layout>
-    <x-authentication-card>
+    <x-authentication-card class="box__sm">
         <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
 
         <div class="box__right">
-
             <form class="form" method="POST" action="{{ route('password.email') }}">
                 <h2 class="form__title">{{ __('Forget Password') }}</h2>
                 @csrf
