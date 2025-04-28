@@ -1,3 +1,4 @@
+/* https://yevgenysim-turkey.github.io/dashbrd/index.html */
 .flatpickr-calendar {
     animation: none;
     background: transparent;
@@ -19,6 +20,7 @@
     visibility: hidden;
     width: 307.875px;
 }
+
 .flatpickr-calendar.inline,
 .flatpickr-calendar.open {
     max-height: 640px;

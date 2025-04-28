@@ -10,5 +10,141 @@
 @import "datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css";
 @import 'datatables.net-select-bs5/css/select.bootstrap5.css';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 // Font Import (place after @use rules)
 @import url('https://fonts.bunny.net/css?family=Nunito');
+// Font Import (place after @use rules)
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+$breakpoints: (
+    "mobile": 480px,
+    "tablet": 770px,
+    "desktop": 1024px,
+    "large": 1280px,
+);
+
+$teal-green: #45d4a1;
+$teal-green-light: #35d89fc0;
+$teal-green-dark: #8fe7c87c;
+$text-opacity : 1;
+
+@mixin breakpoint($point, $type: min) {
+    $value: map-get($breakpoints, $point);
+
+    @if $value != null {
+        @media (#{$type}-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint `#{$point}` is not defined in \$breakpoints map.";
+    }
+}
+
+:root{
+    --cp-nav-bg-color: #ffffff;
+}
+
+body {
+    font-family: "Playfair Display", 'Times New Roman', Times, serif;
+    background-color: #e2eef0;
+}
+
+.navbar {
+    background-color: var(--cp-nav-bg-color);
+}
+#toggleSidebar {
+    position: absolute;
+    /* left: 15rem; */
+    font-size: larger;
+    font-weight: bolder;
+}
+
+/* .collapsed #toggleSidebar {
+    left: 3.7rem !important;
+} */
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 3.5rem !important;
+    left: 0;
+    padding-top: 1rem;
+    transition: width 0.3s;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar.collapsed:hover {
+    width: 250px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav .nav-link:hover, .nav .nav-link.active {
+    background: #228cf7;
+}
+
+.sidebar.collapsed a {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar.collapsed:hover a {
+    text-align: left;
+    padding: 10px 15px;
+}
+
+.nav-item:hover .collapse:not(.show) {
+    display: block;
+}
+
+.sidebar.collapsed .sidebar-text {
+    display: none;
+}
+.sidebar.collapsed .sidebar-logo {
+    width: 100% !important;
+}
+
+.sidebar.collapsed:hover .sidebar-logo {
+    width: 25% !important;
+}
+
+.sidebar.collapsed:hover .sidebar-text {
+    display: inline;
+}
+
+.content {
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+@media (min-width: 992px) {
+    .content {
+        margin-left: 250px;
+    }
+
+    .content.collapsed {
+        margin-left: 70px;
+    }
+}
+
+#sidebar,
+#navbar {
+    background-color: #fff !important;
+}
+.sidebar.collapsed:hover + .navbar {
+    z-index: -1; 
+}

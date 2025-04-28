@@ -19,107 +19,18 @@
         <!-- Styles -->
 
         <style>
-            #toggleSidebar {
-                position: absolute;
-                /* left: 15rem; */
-                font-size: larger;
-                font-weight: bolder;
-            }
 
-            /* .collapsed #toggleSidebar {
-                left: 3.7rem !important;
-            } */
-
-            .sidebar {
-                height: 100vh;
-                width: 250px;
-                position: fixed;
-                top: 3.5rem !important;
-                left: 0;
-                padding-top: 1rem;
-                transition: width 0.3s;
-                background-color: #343a40;
-                color: #fff;
-            }
-
-            .sidebar.collapsed {
-                width: 70px;
-            }
-
-            .sidebar.collapsed:hover {
-                width: 250px;
-            }
-
-            .sidebar a {
-                padding: 10px 15px;
-                display: block;
-                text-decoration: none;
-                color: #fff;
-                transition: color 0.3s;
-            }
-
-            .nav .nav-link:hover, .nav .nav-link.active {
-                background: #228cf7;
-            }
-
-            .sidebar.collapsed a {
-                text-align: center;
-                padding: 10px 0;
-            }
-
-            .sidebar.collapsed:hover a {
-                text-align: left;
-                padding: 10px 15px;
-            }
-
-            .nav-item:hover .collapse:not(.show) {
-                display: block;
-            }
-
-            .sidebar.collapsed .sidebar-text {
-                display: none;
-            }
-            .sidebar.collapsed .sidebar-logo {
-                width: 100% !important;
-            }
-
-            .sidebar.collapsed:hover .sidebar-logo {
-                width: 25% !important;
-            }
-
-            .sidebar.collapsed:hover .sidebar-text {
-                display: inline;
-            }
-
-            .content {
-                padding: 20px;
-                transition: margin-left 0.3s;
-            }
-
-            @media (min-width: 992px) {
-                .content {
-                    margin-left: 250px;
-                }
-
-                .content.collapsed {
-                    margin-left: 70px;
-                }
-            }
-
-            #sidebar,
-            #navbar {
-                background-color: #fff !important;
-            }
-            .sidebar.collapsed:hover + .navbar {
-                z-index: -1; 
-            }
         </style>
         @stack('styles')
         @livewireStyles
     </head>
     <body class="font-sans antialiased"></body>
-        @include('layouts.partials.sidebar')
-        @livewire('navigation-menu')
+    
+        @include('layouts.partials.sidenav')
+        {{-- @livewire('navigation-menu') --}}
+        
+        @include('layouts.partials.topnav')
+        
         @include('layouts.partials.mobile-button-nav')
 
         <div id="content" class="content pt-5 mt-5">

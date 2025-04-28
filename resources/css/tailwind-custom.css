@@ -3,13 +3,13 @@
 *,
 :before,
 :after {
-    --tw-translate-x: 0;
-    --tw-translate-y: 0;
-    --tw-rotate: 0;
-    --tw-skew-x: 0;
-    --tw-skew-y: 0;
-    --tw-scale-x: 1;
-    --tw-scale-y: 1;
+    --cp-translate-x: 0;
+    --cp-translate-y: 0;
+    --cp-rotate: 0;
+    --cp-skew-x: 0;
+    --cp-skew-y: 0;
+    --cp-scale-x: 1;
+    --cp-scale-y: 1;
 }
 
 small {
@@ -37,7 +37,7 @@ legend {
 }
 
 .prose {
-    color: var(--tw-prose-body);
+    color: var(--cp-prose-body);
     max-width: 65ch
 }
 
@@ -49,7 +49,7 @@ legend {
 
 .prose :where([class~=lead]):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-lead);
+    color: var(--cp-prose-lead);
     font-size: 1.25em;
     line-height: 1.6;
     margin-top: 1.2em;
@@ -58,14 +58,14 @@ legend {
 
 .prose :where(a):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-links);
+    color: var(--cp-prose-links);
     text-decoration: underline;
     font-weight: 500
 }
 
 .prose :where(strong):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-bold);
+    color: var(--cp-prose-bold);
     font-weight: 600
 }
 
@@ -148,24 +148,24 @@ legend {
 .prose :where(ol>li):not(:where([class~=not-prose],
 [class~=not-prose] *))::marker {
     font-weight: 400;
-    color: var(--tw-prose-counters)
+    color: var(--cp-prose-counters)
 }
 
 .prose :where(ul>li):not(:where([class~=not-prose],
 [class~=not-prose] *))::marker {
-    color: var(--tw-prose-bullets)
+    color: var(--cp-prose-bullets)
 }
 
 .prose :where(dt):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-headings);
+    color: var(--cp-prose-headings);
     font-weight: 600;
     margin-top: 1.25em
 }
 
 .prose :where(hr):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    border-color: var(--tw-prose-hr);
+    border-color: var(--cp-prose-hr);
     border-top-width: 1px;
     margin-top: 3em;
     margin-bottom: 3em
@@ -175,9 +175,9 @@ legend {
 [class~=not-prose] *)) {
     font-weight: 500;
     font-style: italic;
-    color: var(--tw-prose-quotes);
+    color: var(--cp-prose-quotes);
     border-inline-start-width: .25rem;
-    border-inline-start-color: var(--tw-prose-quote-borders);
+    border-inline-start-color: var(--cp-prose-quote-borders);
     quotes: "“""”""‘""’";
     margin-top: 1.6em;
     margin-bottom: 1.6em;
@@ -196,7 +196,7 @@ legend {
 
 .prose :where(h1):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-headings);
+    color: var(--cp-prose-headings);
     font-weight: 800;
     font-size: 2.25em;
     margin-top: 0;
@@ -212,7 +212,7 @@ legend {
 
 .prose :where(h2):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-headings);
+    color: var(--cp-prose-headings);
     font-weight: 700;
     font-size: 1.5em;
     margin-top: 2em;
@@ -228,7 +228,7 @@ legend {
 
 .prose :where(h3):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-headings);
+    color: var(--cp-prose-headings);
     font-weight: 600;
     font-size: 1.25em;
     margin-top: 1.6em;
@@ -244,7 +244,7 @@ legend {
 
 .prose :where(h4):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-headings);
+    color: var(--cp-prose-headings);
     font-weight: 600;
     margin-top: 1.5em;
     margin-bottom: .5em;
@@ -280,8 +280,8 @@ legend {
 [class~=not-prose] *)) {
     font-weight: 500;
     font-family: inherit;
-    color: var(--tw-prose-kbd);
-    box-shadow: 0 0 0 1px rgb(var(--tw-prose-kbd-shadows) / 10%), 0 3px rgb(var(--tw-prose-kbd-shadows) / 10%);
+    color: var(--cp-prose-kbd);
+    box-shadow: 0 0 0 1px rgb(var(--cp-prose-kbd-shadows) / 10%), 0 3px rgb(var(--cp-prose-kbd-shadows) / 10%);
     font-size: .875em;
     border-radius: .3125rem;
     padding-top: .1875em;
@@ -292,7 +292,7 @@ legend {
 
 .prose :where(code):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-code);
+    color: var(--cp-prose-code);
     font-weight: 600;
     font-size: .875em
 }
@@ -346,8 +346,8 @@ legend {
 
 .prose :where(pre):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-pre-code);
-    background-color: var(--tw-prose-pre-bg);
+    color: var(--cp-prose-pre-code);
+    background-color: var(--cp-prose-pre-bg);
     overflow-x: auto;
     font-weight: 400;
     font-size: .875em;
@@ -397,12 +397,12 @@ legend {
 .prose :where(thead):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
     border-bottom-width: 1px;
-    border-bottom-color: var(--tw-prose-th-borders)
+    border-bottom-color: var(--cp-prose-th-borders)
 }
 
 .prose :where(thead th):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-headings);
+    color: var(--cp-prose-headings);
     font-weight: 600;
     vertical-align: bottom;
     padding-inline-end: .5714286em;
@@ -413,7 +413,7 @@ legend {
 .prose :where(tbody tr):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
     border-bottom-width: 1px;
-    border-bottom-color: var(--tw-prose-td-borders)
+    border-bottom-color: var(--cp-prose-td-borders)
 }
 
 .prose :where(tbody tr:last-child):not(:where([class~=not-prose],
@@ -429,7 +429,7 @@ legend {
 .prose :where(tfoot):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
     border-top-width: 1px;
-    border-top-color: var(--tw-prose-th-borders)
+    border-top-color: var(--cp-prose-th-borders)
 }
 
 .prose :where(tfoot td):not(:where([class~=not-prose],
@@ -451,49 +451,49 @@ td):not(:where([class~=not-prose],
 
 .prose :where(figcaption):not(:where([class~=not-prose],
 [class~=not-prose] *)) {
-    color: var(--tw-prose-captions);
+    color: var(--cp-prose-captions);
     font-size: .875em;
     line-height: 1.4285714;
     margin-top: .8571429em
 }
 
 .prose {
-    --tw-prose-body: #374151;
-    --tw-prose-headings: #111827;
-    --tw-prose-lead: #4b5563;
-    --tw-prose-links: #111827;
-    --tw-prose-bold: #111827;
-    --tw-prose-counters: #6b7280;
-    --tw-prose-bullets: #d1d5db;
-    --tw-prose-hr: #e5e7eb;
-    --tw-prose-quotes: #111827;
-    --tw-prose-quote-borders: #e5e7eb;
-    --tw-prose-captions: #6b7280;
-    --tw-prose-kbd: #111827;
-    --tw-prose-kbd-shadows: 17 24 39;
-    --tw-prose-code: #111827;
-    --tw-prose-pre-code: #e5e7eb;
-    --tw-prose-pre-bg: #1f2937;
-    --tw-prose-th-borders: #d1d5db;
-    --tw-prose-td-borders: #e5e7eb;
-    --tw-prose-invert-body: #d1d5db;
-    --tw-prose-invert-headings: #fff;
-    --tw-prose-invert-lead: #9ca3af;
-    --tw-prose-invert-links: #fff;
-    --tw-prose-invert-bold: #fff;
-    --tw-prose-invert-counters: #9ca3af;
-    --tw-prose-invert-bullets: #4b5563;
-    --tw-prose-invert-hr: #374151;
-    --tw-prose-invert-quotes: #f3f4f6;
-    --tw-prose-invert-quote-borders: #374151;
-    --tw-prose-invert-captions: #9ca3af;
-    --tw-prose-invert-kbd: #fff;
-    --tw-prose-invert-kbd-shadows: 255 255 255;
-    --tw-prose-invert-code: #fff;
-    --tw-prose-invert-pre-code: #d1d5db;
-    --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
-    --tw-prose-invert-th-borders: #4b5563;
-    --tw-prose-invert-td-borders: #374151;
+    --cp-prose-body: #374151;
+    --cp-prose-headings: #111827;
+    --cp-prose-lead: #4b5563;
+    --cp-prose-links: #111827;
+    --cp-prose-bold: #111827;
+    --cp-prose-counters: #6b7280;
+    --cp-prose-bullets: #d1d5db;
+    --cp-prose-hr: #e5e7eb;
+    --cp-prose-quotes: #111827;
+    --cp-prose-quote-borders: #e5e7eb;
+    --cp-prose-captions: #6b7280;
+    --cp-prose-kbd: #111827;
+    --cp-prose-kbd-shadows: 17 24 39;
+    --cp-prose-code: #111827;
+    --cp-prose-pre-code: #e5e7eb;
+    --cp-prose-pre-bg: #1f2937;
+    --cp-prose-th-borders: #d1d5db;
+    --cp-prose-td-borders: #e5e7eb;
+    --cp-prose-invert-body: #d1d5db;
+    --cp-prose-invert-headings: #fff;
+    --cp-prose-invert-lead: #9ca3af;
+    --cp-prose-invert-links: #fff;
+    --cp-prose-invert-bold: #fff;
+    --cp-prose-invert-counters: #9ca3af;
+    --cp-prose-invert-bullets: #4b5563;
+    --cp-prose-invert-hr: #374151;
+    --cp-prose-invert-quotes: #f3f4f6;
+    --cp-prose-invert-quote-borders: #374151;
+    --cp-prose-invert-captions: #9ca3af;
+    --cp-prose-invert-kbd: #fff;
+    --cp-prose-invert-kbd-shadows: 255 255 255;
+    --cp-prose-invert-code: #fff;
+    --cp-prose-invert-pre-code: #d1d5db;
+    --cp-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+    --cp-prose-invert-th-borders: #4b5563;
+    --cp-prose-invert-td-borders: #374151;
     font-size: 1rem;
     line-height: 1.75
 }
@@ -650,29 +650,29 @@ tfoot td:last-child):not(:where([class~=not-prose],
 }
 
 .translate-y-0 {
-    --tw-translate-y: 0px;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    --cp-translate-y: 0px;
+    transform: translate(var(--cp-translate-x), var(--cp-translate-y)) rotate(var(--cp-rotate)) skew(var(--cp-skew-x)) skewY(var(--cp-skew-y)) scaleX(var(--cp-scale-x)) scaleY(var(--cp-scale-y))
 }
 
 .translate-y-4 {
-    --tw-translate-y: 1rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    --cp-translate-y: 1rem;
+    transform: translate(var(--cp-translate-x), var(--cp-translate-y)) rotate(var(--cp-rotate)) skew(var(--cp-skew-x)) skewY(var(--cp-skew-y)) scaleX(var(--cp-scale-x)) scaleY(var(--cp-scale-y))
 }
 
 .scale-100 {
-    --tw-scale-x: 1;
-    --tw-scale-y: 1;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    --cp-scale-x: 1;
+    --cp-scale-y: 1;
+    transform: translate(var(--cp-translate-x), var(--cp-translate-y)) rotate(var(--cp-rotate)) skew(var(--cp-skew-x)) skewY(var(--cp-skew-y)) scaleX(var(--cp-scale-x)) scaleY(var(--cp-scale-y))
 }
 
 .scale-95 {
-    --tw-scale-x: .95;
-    --tw-scale-y: .95;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    --cp-scale-x: .95;
+    --cp-scale-y: .95;
+    transform: translate(var(--cp-translate-x), var(--cp-translate-y)) rotate(var(--cp-rotate)) skew(var(--cp-skew-x)) skewY(var(--cp-skew-y)) scaleX(var(--cp-scale-x)) scaleY(var(--cp-scale-y))
 }
 
 .transform {
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    transform: translate(var(--cp-translate-x), var(--cp-translate-y)) rotate(var(--cp-rotate)) skew(var(--cp-skew-x)) skewY(var(--cp-skew-y)) scaleX(var(--cp-scale-x)) scaleY(var(--cp-scale-y))
 }
 
 .bg-\[\#FF2D20\]\/10 {
@@ -680,77 +680,77 @@ tfoot td:last-child):not(:where([class~=not-prose],
 }
 
 .bg-gray-100 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--cp-bg-opacity, 1))
 }
 
 .bg-gray-200 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--cp-bg-opacity, 1))
 }
 
 .bg-gray-50 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--cp-bg-opacity, 1))
 }
 
 .bg-gray-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(107 114 128 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(107 114 128 / var(--cp-bg-opacity, 1))
 }
 
 .bg-gray-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--cp-bg-opacity, 1))
 }
 
 .bg-indigo-50 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(238 242 255 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(238 242 255 / var(--cp-bg-opacity, 1))
 }
 
 .bg-indigo-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(99 102 241 / var(--cp-bg-opacity, 1))
 }
 
 .bg-indigo-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(79 70 229 / var(--cp-bg-opacity, 1))
 }
 
 .bg-red-100 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(254 226 226 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(254 226 226 / var(--cp-bg-opacity, 1))
 }
 
 .bg-red-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(220 38 38 / var(--cp-bg-opacity, 1))
 }
 
 .bg-red-700 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(185 28 28 / var(--cp-bg-opacity, 1))
 }
 
 .bg-white {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--cp-bg-opacity, 1))
 }
 
 .bg-yellow-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(234 179 8 / var(--cp-bg-opacity, 1))
 }
 
 .bg-yellow-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(202 138 4 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(202 138 4 / var(--cp-bg-opacity, 1))
 }
 
 .bg-opacity-25 {
-    --tw-bg-opacity: .25
+    --cp-bg-opacity: .25
 }
 
 
@@ -776,8 +776,8 @@ tfoot td:last-child):not(:where([class~=not-prose],
 }
 
 .text-black {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(0 0 0 / var(--cp-text-opacity, 1))
 }
 
 .text-black\/50 {
@@ -785,73 +785,73 @@ tfoot td:last-child):not(:where([class~=not-prose],
 }
 
 .text-gray-400 {
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(156 163 175 / var(--cp-text-opacity, 1))
 }
 
 .text-gray-500 {
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(107 114 128 / var(--cp-text-opacity, 1))
 }
 
 .text-gray-600 {
-    --tw-text-opacity: 1;
-    color: rgb(75 85 99 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(75 85 99 / var(--cp-text-opacity, 1))
 }
 
 .text-gray-700 {
-    --tw-text-opacity: 1;
-    color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(55 65 81 / var(--cp-text-opacity, 1))
 }
 
 .text-gray-800 {
-    --tw-text-opacity: 1;
-    color: rgb(31 41 55 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(31 41 55 / var(--cp-text-opacity, 1))
 }
 
 .text-gray-900 {
-    --tw-text-opacity: 1;
-    color: rgb(17 24 39 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(17 24 39 / var(--cp-text-opacity, 1))
 }
 
 .text-green-400 {
-    --tw-text-opacity: 1;
-    color: rgb(74 222 128 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(74 222 128 / var(--cp-text-opacity, 1))
 }
 
 .text-green-500 {
-    --tw-text-opacity: 1;
-    color: rgb(34 197 94 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(34 197 94 / var(--cp-text-opacity, 1))
 }
 
 .text-green-600 {
-    --tw-text-opacity: 1;
-    color: rgb(22 163 74 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(22 163 74 / var(--cp-text-opacity, 1))
 }
 
 .text-indigo-600 {
-    --tw-text-opacity: 1;
-    color: rgb(79 70 229 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(79 70 229 / var(--cp-text-opacity, 1))
 }
 
 .text-indigo-700 {
-    --tw-text-opacity: 1;
-    color: rgb(67 56 202 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(67 56 202 / var(--cp-text-opacity, 1))
 }
 
 .text-red-500 {
-    --tw-text-opacity: 1;
-    color: rgb(239 68 68 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(239 68 68 / var(--cp-text-opacity, 1))
 }
 
 .text-red-600 {
-    --tw-text-opacity: 1;
-    color: rgb(220 38 38 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(220 38 38 / var(--cp-text-opacity, 1))
 }
 
 .text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(255 255 255 / var(--cp-text-opacity, 1))
 }
 
 .antialiased {
@@ -860,7 +860,7 @@ tfoot td:last-child):not(:where([class~=not-prose],
 }
 
 .filter {
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    filter: var(--cp-blur) var(--cp-brightness) var(--cp-contrast) var(--cp-grayscale) var(--cp-hue-rotate) var(--cp-invert) var(--cp-saturate) var(--cp-sepia) var(--cp-drop-shadow)
 }
 
 .transition {
@@ -911,110 +911,110 @@ tfoot td:last-child):not(:where([class~=not-prose],
 
 @media (prefers-color-scheme: dark) {
     .dark\:prose-invert {
-        --tw-prose-body: var(--tw-prose-invert-body);
-        --tw-prose-headings: var(--tw-prose-invert-headings);
-        --tw-prose-lead: var(--tw-prose-invert-lead);
-        --tw-prose-links: var(--tw-prose-invert-links);
-        --tw-prose-bold: var(--tw-prose-invert-bold);
-        --tw-prose-counters: var(--tw-prose-invert-counters);
-        --tw-prose-bullets: var(--tw-prose-invert-bullets);
-        --tw-prose-hr: var(--tw-prose-invert-hr);
-        --tw-prose-quotes: var(--tw-prose-invert-quotes);
-        --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
-        --tw-prose-captions: var(--tw-prose-invert-captions);
-        --tw-prose-kbd: var(--tw-prose-invert-kbd);
-        --tw-prose-kbd-shadows: var(--tw-prose-invert-kbd-shadows);
-        --tw-prose-code: var(--tw-prose-invert-code);
-        --tw-prose-pre-code: var(--tw-prose-invert-pre-code);
-        --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
-        --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
-        --tw-prose-td-borders: var(--tw-prose-invert-td-borders)
+        --cp-prose-body: var(--cp-prose-invert-body);
+        --cp-prose-headings: var(--cp-prose-invert-headings);
+        --cp-prose-lead: var(--cp-prose-invert-lead);
+        --cp-prose-links: var(--cp-prose-invert-links);
+        --cp-prose-bold: var(--cp-prose-invert-bold);
+        --cp-prose-counters: var(--cp-prose-invert-counters);
+        --cp-prose-bullets: var(--cp-prose-invert-bullets);
+        --cp-prose-hr: var(--cp-prose-invert-hr);
+        --cp-prose-quotes: var(--cp-prose-invert-quotes);
+        --cp-prose-quote-borders: var(--cp-prose-invert-quote-borders);
+        --cp-prose-captions: var(--cp-prose-invert-captions);
+        --cp-prose-kbd: var(--cp-prose-invert-kbd);
+        --cp-prose-kbd-shadows: var(--cp-prose-invert-kbd-shadows);
+        --cp-prose-code: var(--cp-prose-invert-code);
+        --cp-prose-pre-code: var(--cp-prose-invert-pre-code);
+        --cp-prose-pre-bg: var(--cp-prose-invert-pre-bg);
+        --cp-prose-th-borders: var(--cp-prose-invert-th-borders);
+        --cp-prose-td-borders: var(--cp-prose-invert-td-borders)
     }
 }
 
 .selection\:bg-\[\#FF2D20\] *::-moz-selection {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 45 32 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(255 45 32 / var(--cp-bg-opacity, 1))
 }
 
 .selection\:bg-\[\#FF2D20\] *::selection {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 45 32 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(255 45 32 / var(--cp-bg-opacity, 1))
 }
 
 .selection\:text-white *::-moz-selection {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(255 255 255 / var(--cp-text-opacity, 1))
 }
 
 .selection\:text-white *::selection {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(255 255 255 / var(--cp-text-opacity, 1))
 }
 
 .selection\:bg-\[\#FF2D20\]::-moz-selection {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 45 32 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(255 45 32 / var(--cp-bg-opacity, 1))
 }
 
 .selection\:bg-\[\#FF2D20\]::selection {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 45 32 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(255 45 32 / var(--cp-bg-opacity, 1))
 }
 
 .selection\:text-white::-moz-selection {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(255 255 255 / var(--cp-text-opacity, 1))
 }
 
 .selection\:text-white::selection {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(255 255 255 / var(--cp-text-opacity, 1))
 }
 
 .hover\:border-gray-300:hover {
-    --tw-border-opacity: 1;
-    border-color: rgb(209 213 219 / var(--tw-border-opacity, 1))
+    --cp-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--cp-border-opacity, 1))
 }
 
 .hover\:bg-gray-100:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--cp-bg-opacity, 1))
 }
 
 .hover\:bg-gray-50:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--cp-bg-opacity, 1))
 }
 
 .hover\:bg-gray-700:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--cp-bg-opacity, 1))
 }
 
 .hover\:bg-indigo-600:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(79 70 229 / var(--cp-bg-opacity, 1))
 }
 
 .hover\:bg-red-500:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(239 68 68 / var(--cp-bg-opacity, 1))
 }
 
 .hover\:bg-red-600:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(220 38 38 / var(--cp-bg-opacity, 1))
 }
 
 .hover\:bg-yellow-600:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(202 138 4 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(202 138 4 / var(--cp-bg-opacity, 1))
 }
 
 .hover\:text-black:hover {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(0 0 0 / var(--cp-text-opacity, 1))
 }
 
 .hover\:text-black\/70:hover {
@@ -1022,32 +1022,32 @@ tfoot td:last-child):not(:where([class~=not-prose],
 }
 
 .hover\:text-gray-400:hover {
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(156 163 175 / var(--cp-text-opacity, 1))
 }
 
 .hover\:text-gray-500:hover {
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(107 114 128 / var(--cp-text-opacity, 1))
 }
 
 .hover\:text-gray-700:hover {
-    --tw-text-opacity: 1;
-    color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(55 65 81 / var(--cp-text-opacity, 1))
 }
 
 .hover\:text-gray-800:hover {
-    --tw-text-opacity: 1;
-    color: rgb(31 41 55 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(31 41 55 / var(--cp-text-opacity, 1))
 }
 
 .hover\:text-gray-900:hover {
-    --tw-text-opacity: 1;
-    color: rgb(17 24 39 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(17 24 39 / var(--cp-text-opacity, 1))
 }
 
 .hover\:ring-black\/20:hover {
-    --tw-ring-color: rgb(0 0 0 / .2)
+    --cp-ring-color: rgb(0 0 0 / .2)
 }
 
 .focus\:z-10:focus {
@@ -1059,78 +1059,78 @@ tfoot td:last-child):not(:where([class~=not-prose],
 }
 
 .focus\:border-blue-300:focus {
-    --tw-border-opacity: 1;
-    border-color: rgb(147 197 253 / var(--tw-border-opacity, 1))
+    --cp-border-opacity: 1;
+    border-color: rgb(147 197 253 / var(--cp-border-opacity, 1))
 }
 
 .focus\:border-gray-300:focus {
-    --tw-border-opacity: 1;
-    border-color: rgb(209 213 219 / var(--tw-border-opacity, 1))
+    --cp-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--cp-border-opacity, 1))
 }
 
 .focus\:border-indigo-500:focus {
-    --tw-border-opacity: 1;
-    border-color: rgb(99 102 241 / var(--tw-border-opacity, 1))
+    --cp-border-opacity: 1;
+    border-color: rgb(99 102 241 / var(--cp-border-opacity, 1))
 }
 
 .focus\:border-indigo-700:focus {
-    --tw-border-opacity: 1;
-    border-color: rgb(67 56 202 / var(--tw-border-opacity, 1))
+    --cp-border-opacity: 1;
+    border-color: rgb(67 56 202 / var(--cp-border-opacity, 1))
 }
 
 .focus\:bg-gray-100:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--cp-bg-opacity, 1))
 }
 
 .focus\:bg-gray-50:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--cp-bg-opacity, 1))
 }
 
 .focus\:bg-gray-700:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--cp-bg-opacity, 1))
 }
 
 .focus\:bg-indigo-100:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgb(224 231 255 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(224 231 255 / var(--cp-bg-opacity, 1))
 }
 
 .focus\:bg-indigo-600:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(79 70 229 / var(--cp-bg-opacity, 1))
 }
 
 .focus\:bg-red-600:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(220 38 38 / var(--cp-bg-opacity, 1))
 }
 
 .focus\:bg-yellow-600:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgb(202 138 4 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(202 138 4 / var(--cp-bg-opacity, 1))
 }
 
 .focus\:text-gray-500:focus {
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(107 114 128 / var(--cp-text-opacity, 1))
 }
 
 .focus\:text-gray-700:focus {
-    --tw-text-opacity: 1;
-    color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(55 65 81 / var(--cp-text-opacity, 1))
 }
 
 .focus\:text-gray-800:focus {
-    --tw-text-opacity: 1;
-    color: rgb(31 41 55 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(31 41 55 / var(--cp-text-opacity, 1))
 }
 
 .focus\:text-indigo-800:focus {
-    --tw-text-opacity: 1;
-    color: rgb(55 48 163 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(55 48 163 / var(--cp-text-opacity, 1))
 }
 
 .focus\:outline-none:focus {
@@ -1139,70 +1139,70 @@ tfoot td:last-child):not(:where([class~=not-prose],
 }
 
 .focus\:ring:focus {
-    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+    --cp-ring-offset-shadow: var(--cp-ring-inset) 0 0 0 var(--cp-ring-offset-width) var(--cp-ring-offset-color);
+    --cp-ring-shadow: var(--cp-ring-inset) 0 0 0 calc(3px + var(--cp-ring-offset-width)) var(--cp-ring-color);
+    box-shadow: var(--cp-ring-offset-shadow), var(--cp-ring-shadow), var(--cp-shadow, 0 0 #0000)
 }
 
 .focus\:ring-2:focus {
-    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+    --cp-ring-offset-shadow: var(--cp-ring-inset) 0 0 0 var(--cp-ring-offset-width) var(--cp-ring-offset-color);
+    --cp-ring-shadow: var(--cp-ring-inset) 0 0 0 calc(2px + var(--cp-ring-offset-width)) var(--cp-ring-color);
+    box-shadow: var(--cp-ring-offset-shadow), var(--cp-ring-shadow), var(--cp-shadow, 0 0 #0000)
 }
 
 .focus\:ring-indigo-500:focus {
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity, 1))
+    --cp-ring-opacity: 1;
+    --cp-ring-color: rgb(99 102 241 / var(--cp-ring-opacity, 1))
 }
 
 .focus\:ring-red-500:focus {
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity, 1))
+    --cp-ring-opacity: 1;
+    --cp-ring-color: rgb(239 68 68 / var(--cp-ring-opacity, 1))
 }
 
 .focus\:ring-offset-2:focus {
-    --tw-ring-offset-width: 2px
+    --cp-ring-offset-width: 2px
 }
 
 .focus-visible\:ring-1:focus-visible {
-    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+    --cp-ring-offset-shadow: var(--cp-ring-inset) 0 0 0 var(--cp-ring-offset-width) var(--cp-ring-offset-color);
+    --cp-ring-shadow: var(--cp-ring-inset) 0 0 0 calc(1px + var(--cp-ring-offset-width)) var(--cp-ring-color);
+    box-shadow: var(--cp-ring-offset-shadow), var(--cp-ring-shadow), var(--cp-shadow, 0 0 #0000)
 }
 
 .focus-visible\:ring-\[\#FF2D20\]:focus-visible {
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity, 1))
+    --cp-ring-opacity: 1;
+    --cp-ring-color: rgb(255 45 32 / var(--cp-ring-opacity, 1))
 }
 
 .active\:bg-gray-100:active {
-    --tw-bg-opacity: 1;
-    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--cp-bg-opacity, 1))
 }
 
 .active\:bg-gray-50:active {
-    --tw-bg-opacity: 1;
-    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--cp-bg-opacity, 1))
 }
 
 .active\:bg-gray-900:active {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--cp-bg-opacity, 1))
 }
 
 .active\:bg-red-700:active {
-    --tw-bg-opacity: 1;
-    background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1))
+    --cp-bg-opacity: 1;
+    background-color: rgb(185 28 28 / var(--cp-bg-opacity, 1))
 }
 
 .active\:text-gray-500:active {
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(107 114 128 / var(--cp-text-opacity, 1))
 }
 
 .active\:text-gray-700:active {
-    --tw-text-opacity: 1;
-    color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+    --cp-text-opacity: 1;
+    color: rgb(55 65 81 / var(--cp-text-opacity, 1))
 }
 
 .disabled\:opacity-25:disabled {
