@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31af41fdcc9c37f7a559e47077a3d94c",
+    "content-hash": "b1cf88685ae3094bba19f8fe905105b2",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1651,16 +1651,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v11.44.2",
+            "version": "v11.44.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "f85216c82cbd38b66d67ebd20ea762cb3751a4b4"
+                "reference": "00bc6ac91a6d577bf051c18ddaa638c0d221e1c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/f85216c82cbd38b66d67ebd20ea762cb3751a4b4",
-                "reference": "f85216c82cbd38b66d67ebd20ea762cb3751a4b4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/00bc6ac91a6d577bf051c18ddaa638c0d221e1c7",
+                "reference": "00bc6ac91a6d577bf051c18ddaa638c0d221e1c7",
                 "shasum": ""
             },
             "require": {
@@ -1862,7 +1862,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-03-12T14:34:30+00:00"
+            "time": "2025-04-25T12:40:47+00:00"
         },
         {
             "name": "laravel/jetstream",
@@ -2069,16 +2069,16 @@
         },
         {
             "name": "laravel/sanctum",
-            "version": "v4.0.8",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sanctum.git",
-                "reference": "ec1dd9ddb2ab370f79dfe724a101856e0963f43c"
+                "reference": "4e4ced5023e9d8949214e0fb43d9f4bde79c7166"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sanctum/zipball/ec1dd9ddb2ab370f79dfe724a101856e0963f43c",
-                "reference": "ec1dd9ddb2ab370f79dfe724a101856e0963f43c",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/4e4ced5023e9d8949214e0fb43d9f4bde79c7166",
+                "reference": "4e4ced5023e9d8949214e0fb43d9f4bde79c7166",
                 "shasum": ""
             },
             "require": {
@@ -2129,7 +2129,7 @@
                 "issues": "https://github.com/laravel/sanctum/issues",
                 "source": "https://github.com/laravel/sanctum"
             },
-            "time": "2025-01-26T19:34:36+00:00"
+            "time": "2025-04-22T13:53:47+00:00"
         },
         {
             "name": "laravel/scout",
@@ -2340,16 +2340,16 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v5.19.0",
+            "version": "v5.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "c40f843c5643fb6b089e46ce9794b8408bf08319"
+                "reference": "30972c12a41f71abeb418bc9ff157da8d9231519"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/c40f843c5643fb6b089e46ce9794b8408bf08319",
-                "reference": "c40f843c5643fb6b089e46ce9794b8408bf08319",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/30972c12a41f71abeb418bc9ff157da8d9231519",
+                "reference": "30972c12a41f71abeb418bc9ff157da8d9231519",
                 "shasum": ""
             },
             "require": {
@@ -2408,7 +2408,7 @@
                 "issues": "https://github.com/laravel/socialite/issues",
                 "source": "https://github.com/laravel/socialite"
             },
-            "time": "2025-03-27T17:26:42+00:00"
+            "time": "2025-04-21T14:21:34+00:00"
         },
         {
             "name": "laravel/telescope",
@@ -6189,16 +6189,16 @@
         },
         {
             "name": "spatie/laravel-backup-server",
-            "version": "4.1.0",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-backup-server.git",
-                "reference": "0091b38ea3e86e4d5de0c06c933fb5832b368b87"
+                "reference": "8a8e27f11c46c3d929aeaa6dd9eb7db31cb2de7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-backup-server/zipball/0091b38ea3e86e4d5de0c06c933fb5832b368b87",
-                "reference": "0091b38ea3e86e4d5de0c06c933fb5832b368b87",
+                "url": "https://api.github.com/repos/spatie/laravel-backup-server/zipball/8a8e27f11c46c3d929aeaa6dd9eb7db31cb2de7c",
+                "reference": "8a8e27f11c46c3d929aeaa6dd9eb7db31cb2de7c",
                 "shasum": ""
             },
             "require": {
@@ -6261,9 +6261,9 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-backup-server/issues",
-                "source": "https://github.com/spatie/laravel-backup-server/tree/4.1.0"
+                "source": "https://github.com/spatie/laravel-backup-server/tree/4.1.1"
             },
-            "time": "2025-04-08T09:42:07+00:00"
+            "time": "2025-04-25T14:47:04+00:00"
         },
         {
             "name": "spatie/laravel-health",
@@ -9589,16 +9589,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.41.0",
+            "version": "v1.41.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "fe1a4ada0abb5e4bd99eb4e4b0d87906c00cdeec"
+                "reference": "e5692510f1ef8e0f5096cde2b885d558f8d86592"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/fe1a4ada0abb5e4bd99eb4e4b0d87906c00cdeec",
-                "reference": "fe1a4ada0abb5e4bd99eb4e4b0d87906c00cdeec",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/e5692510f1ef8e0f5096cde2b885d558f8d86592",
+                "reference": "e5692510f1ef8e0f5096cde2b885d558f8d86592",
                 "shasum": ""
             },
             "require": {
@@ -9648,7 +9648,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2025-01-24T15:45:36+00:00"
+            "time": "2025-04-22T13:39:39+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -11288,16 +11288,16 @@
         },
         {
             "name": "spatie/backtrace",
-            "version": "1.7.1",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/backtrace.git",
-                "reference": "0f2477c520e3729de58e061b8192f161c99f770b"
+                "reference": "9807de6b8fecfaa5b3d10650985f0348b02862b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/backtrace/zipball/0f2477c520e3729de58e061b8192f161c99f770b",
-                "reference": "0f2477c520e3729de58e061b8192f161c99f770b",
+                "url": "https://api.github.com/repos/spatie/backtrace/zipball/9807de6b8fecfaa5b3d10650985f0348b02862b2",
+                "reference": "9807de6b8fecfaa5b3d10650985f0348b02862b2",
                 "shasum": ""
             },
             "require": {
@@ -11335,7 +11335,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/backtrace/tree/1.7.1"
+                "source": "https://github.com/spatie/backtrace/tree/1.7.2"
             },
             "funding": [
                 {
@@ -11347,7 +11347,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-12-02T13:28:15+00:00"
+            "time": "2025-04-28T14:55:53+00:00"
         },
         {
             "name": "spatie/error-solutions",

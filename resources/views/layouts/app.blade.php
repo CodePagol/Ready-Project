@@ -26,10 +26,10 @@
     </head>
     <body class="font-sans antialiased"></body>
     
-        @include('layouts.partials.sidenav')
-        {{-- @livewire('navigation-menu') --}}
         
-        @include('layouts.partials.topnav')
+        @include('layouts.partials.top-nav-bar')
+        @include('layouts.partials.side-nav-bar')
+        {{-- @livewire('navigation-menu') --}}
         
         @include('layouts.partials.mobile-button-nav')
 
