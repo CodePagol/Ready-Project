@@ -168,3 +168,45 @@ document.addEventListener("DOMContentLoaded", function () {
         $('#remarks').summernote('code', remarksContent);
     });
 });
+
+
+// toggle sidebar
+document.addEventListener('DOMContentLoaded', function () {
+    $(document).ready(function () {
+        const sidebar = $('#sidebar');
+        const content = $('#content');
+        const navbar = $('#navbar');
+        const toggleButton = $('#toggleSidebar');
+        const storageKey = 'sidebarCollapsed';
+
+        // Restore the state from localStorage
+        const isCollapsed = localStorage.getItem(storageKey) === 'true';
+        if (isCollapsed) {
+            sidebar.addClass('collapsed');
+            content.addClass('collapsed');
+            navbar.addClass('collapsed');
+            toggleButton.find('i').removeClass('bi-arrow-left-square').addClass('bi-arrow-right-square');
+        }
+
+        // Toggle sidebar and save state in localStorage
+        toggleButton.click(function () {
+            let icon = $(this).find('i');
+
+            if (icon.hasClass('bi-arrow-left-square')) {
+                icon.removeClass('bi-arrow-left-square').addClass('bi-arrow-right-square');
+                localStorage.setItem(storageKey, true); // Save collapsed state
+            } else {
+                icon.removeClass('bi-arrow-right-square').addClass('bi-arrow-left-square');
+                localStorage.setItem(storageKey, false); // Save expanded state
+            }
+
+            // Toggle classes
+            sidebar.toggleClass('collapsed');
+            content.toggleClass('collapsed');
+            navbar.toggleClass('collapsed');
+        });
+          $('[data-bs-target="#home-collapse"]').on('click', function () {
+                  $(this).find('.toggle-icon').toggleClass('bi-chevron-down bi-chevron-up');
+          });
+      });
+});
